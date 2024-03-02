@@ -33,8 +33,17 @@ router.get("/categories", (req, res) => {
   });
 });
 
+router.get("/category/:id", (req, res) => {
+  pool.query(`SELECT * FROM category WHERE category_id=${req.params.id}`, (error, result) => {
+    if (error) {
+      throw error;
+    }
+    res.status(200).json(result.rows);
+  });
+});
+
 router.get("/film-by-category/:name", (req, res) => {
-  pool.query(`SELECT f.title AS title, c.name AS name FROM film f JOIN film_category fc ON f.film_id=fc.film_id JOIN category c ON c.category_id=fc.category_id WHERE c.name = '${req.params.name}'`, (error, result) => {
+  pool.query(`SELECT f.title AS movie_title, c.name AS category FROM film f JOIN film_category fc ON f.film_id=fc.film_id JOIN category c ON c.category_id=fc.category_id WHERE c.name = '${req.params.name}'`, (error, result) => {
     if (error) {
       throw error;
     }

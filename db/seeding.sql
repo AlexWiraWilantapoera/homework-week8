@@ -1,14 +1,14 @@
 INSERT INTO actor (first_name, last_name)
-VALUES ('Tara', 'Basro');
+VALUES ('Dian', 'Sastro');
 
 INSERT INTO actor (first_name, last_name)
-VALUES ('Abimana', 'Aryasatya');
+VALUES ('Babe', 'Cabita');
 
 INSERT INTO actor (first_name, last_name)
-VALUES ('Chelsea', 'Islan');
+VALUES ('Arie', 'Krtiting');
 
 INSERT INTO actor (first_name, last_name)
-VALUES ('Iqbal', 'Ramadhan');
+VALUES ('Masayu', 'Clara');
 
 INSERT INTO actor (first_name, last_name)
-VALUES ('Jefri', 'Nichol');
+VALUES ('Denny', 'Sumargo');
